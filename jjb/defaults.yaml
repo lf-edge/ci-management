@@ -1,0 +1,47 @@
+---
+# LF Edge JJB template variable default values
+
+- defaults:
+    name: global
+
+    # lf-infra-defaults
+    jenkins-ssh-credential: lfedge-jenkins-ssh
+    lftools-version: <1.0.0
+
+    # GitHub configuration
+    git-url: https://github.com
+    git-clone-url: 'git@github.com:'
+    github-org: lf-edge
+    submodule-recursive: true
+
+    # default pr_whitelist to some LF RelEng staff
+    github_pr_whitelist:
+      - tykeal
+      - mightynerderic
+    # default pr_admin_list to LF RelEng lead
+    github_pr_admin_list:
+      - tykeal
+
+    # build discards
+    build-days-to-keep: 30
+
+    # pattern for build files to archive
+    archive-artifacts: ''
+
+    # most jobs invoke docker
+    build-node: ubuntu1804-docker-4c-4g
+
+    # Nexus3 docker registries
+    container-public-registry: ''
+    container-snapshot-registry: ''
+    container-staging-registry: ''
+    container-push-registry: '{container-staging-registry}'
+
+    # Don't define default java version here,
+    # it will not be used by lf-maven-jobs.
+    # Default maven version
+    mvn-version: mvn35
+    # Default maven goals
+    mvn-goals: 'clean install'
+    # Default JVM invocation options
+    mvn-opts: ''

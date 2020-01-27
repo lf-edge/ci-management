@@ -1,0 +1,34 @@
+# Ignore Vim temporary files
+.*.sw?
+
+# Ignore changes to the JJB Configuration File
+jenkins.ini
+
+# Ignore Sandbox temporary files
+jjb/*/releng-*.yaml
+
+# Maven
+target/
+
+# Packer
+.galaxy/
+*.retry
+cloud-env.json
+
+# Vagrant
+.vagrant
+
+# IntelliJ
+.idea/
+*.iml
+
+# Eclipse
+.project
+
+# VSCode
+.vscode
+
+# Python
+.tox/
+__pycache__/
+*.pyc

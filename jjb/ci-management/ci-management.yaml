@@ -1,0 +1,18 @@
+---
+- project:
+    name: ci-management-jobs
+    project: 'ci-management'
+    project-name: 'ci-management'
+    build-node: 'centos7-builder-aws-1c-2g'
+    jjb-version: '3.2.0'
+    jenkins-silos: 'production sandbox'
+    jobs:
+      - '{project-name}-ci-jobs'
+      - '{project-name}-packer-jobs':
+          platforms:
+            - 'centos-7'
+          templates:
+            - 'builder-aws'
+
+    views:
+      - project-view
