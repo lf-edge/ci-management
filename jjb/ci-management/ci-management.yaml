@@ -7,12 +7,7 @@
     jjb-version: '3.2.0'
     jenkins-silos: 'production sandbox'
     jobs:
-      - '{project-name}-ci-jobs'
-      - '{project-name}-packer-jobs':
-          platforms:
-            - 'centos-7'
-          templates:
-            - 'builder-aws'
+      - '{project-name}-github-ci-jobs'
 
     views:
       - project-view
