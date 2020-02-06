@@ -5,7 +5,7 @@
     name: global
 
     # lf-infra-defaults
-    jenkins-ssh-credential: lfedge-jenkins-ssh
+    jenkins-ssh-credential: lfedge-jenkins-ssh-github
     lftools-version: <1.0.0
 
     # GitHub configuration
