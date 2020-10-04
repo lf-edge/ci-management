@@ -1,0 +1,10 @@
+---
+- project:
+    name: eve
+    project-name: eve
+    project: eve
+    mvn-settings: eve-settings
+    jobs:
+      - gerrit-maven-clm
+
+    stream: master
