@@ -5,9 +5,16 @@
     project-name: 'ci-management'
     build-node: 'centos7-builder-aws-1c-2g'
     jjb-version: '3.2.0'
-    jenkins-silos: 'production sandbox'
+    jenkins-silos: 'production'
     jobs:
       - '{project-name}-github-ci-jobs'
+      - '{project-name}-github-packer-jobs':
+          platforms:
+            - 'centos-7'
+            - 'centos-8'
+            - 'ubuntu-22.04'
+          templates:
+            - 'builder-aws'
 
     views:
       - project-view

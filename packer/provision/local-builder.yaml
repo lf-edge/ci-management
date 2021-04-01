@@ -1,2 +1,1 @@
----
-- import_playbook: ../common-packer/provision/baseline.yaml
+../common-packer/provision/local-builder.yaml
