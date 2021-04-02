@@ -9,10 +9,12 @@
     jobs:
       - '{project-name}-github-ci-jobs'
       - '{project-name}-github-packer-jobs':
+          openstack: false
+          packer-builder: aws
           platforms:
             - 'centos-7'
             - 'centos-8'
-            - 'ubuntu-22.04'
+            - 'ubuntu-20.04'
           templates:
             - 'builder-aws'
 
