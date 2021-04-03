@@ -12,7 +12,7 @@
           platforms:
             - 'centos-7'
             - 'centos-8'
-            - 'ubuntu-22.04'
+            - 'ubuntu-20.04'
           templates:
             - 'builder-aws'
 
