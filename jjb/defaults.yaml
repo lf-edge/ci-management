@@ -1,6 +1,6 @@
 ---
 # LF Edge JJB template variable default values
-
+# Arbitrary change
 - defaults:
     name: global
 

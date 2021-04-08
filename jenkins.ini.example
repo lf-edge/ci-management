@@ -7,5 +7,5 @@ recursive=True
 [jenkins]
 user=#LFID#
 password=#api_token#
-url=https://jenkins.lfedge.org/sandbox
+url=https://jenkins.lfedge.org
 query_plugins_info=False
