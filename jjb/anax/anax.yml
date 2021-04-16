@@ -1,0 +1,13 @@
+- job:
+    name: anax-build-pipeline
+    project-type: pipeline
+    pipeline-scm:
+      script-path: "Jenkinsfile"
+      scm:
+        - git:
+            url: "https://github.com/open-horizon/anax.git"
+            branches: 
+              - "lfedge-jenkins"
+            clean: true
+    triggers:
+      - github      
