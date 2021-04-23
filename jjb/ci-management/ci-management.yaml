@@ -20,6 +20,8 @@
     project: ci-management
     project-name: ci-management
     build-node: centos7-builder-aws-1c-2g
+    openstack: false
+    packer-builder: aws
 
 - project:
     name: packer-builder-jobs
@@ -30,6 +32,8 @@
     project: ci-management
     project-name: ci-management
     build-node: centos7-builder-aws-1c-2g
+    openstack: false
+    packer-builder: aws
 
     templates: builder-aws
     platforms:
@@ -46,6 +50,8 @@
     project: ci-management
     project-name: ci-management
     build-node: centos7-builder-aws-1c-2g
+    openstack: false
+    packer-builder: aws
     build-timeout: 90
 
     templates: docker-aws

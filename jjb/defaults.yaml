@@ -7,6 +7,7 @@
     # lf-infra-defaults
     jenkins-ssh-credential: lfedge-jenkins-ssh-github
     lftools-version: <1.0.0
+    packer-version: 1.7.2
 
     # GitHub configuration
     git-url: https://github.com
@@ -28,9 +29,6 @@
 
     # pattern for build files to archive
     archive-artifacts: ''
-
-    # most jobs invoke docker
-    build-node: ubuntu1804-docker-4c-4g
 
     # Nexus3 docker registries
     container-public-registry: ''
