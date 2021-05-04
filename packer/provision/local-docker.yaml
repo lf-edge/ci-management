@@ -1,1 +1,31 @@
-../common-packer/provision/local-docker.yaml
+---
+- import_playbook: ../common-packer/provision/docker.yaml
+
+- hosts: all
+  become_user: root
+  become_method: sudo
+  vars:
+    golang_version: 1.14.1
+    golang_url: https://storage.googleapis.com/golang/go{{golang_version}}.linux-amd64.tar.gz
+
+  tasks:
+    - name: Set golang download url
+      set_fact:
+        golang_url: https://storage.googleapis.com/golang/go{{golang_version}}.linux-arm64.tar.gz
+      when: "'aarch64' in ansible_architecture"
+
+    - name: 'Install GoLang {{golang_version}}'
+      block:
+        - name: 'Fetch golang {{golang_version}} to /tmp/go{{golang_version}}.tar.gz'
+          get_url:
+            url: '{{golang_url}}'
+            dest: '/tmp/go{{golang_version}}.tar.gz'
+        - name: 'Install golang {{golang_version}} to /usr/local'
+          unarchive:
+            src: '/tmp/go{{golang_version}}.tar.gz'
+            dest: /usr/local
+            remote_src: true
+          become: true
+        - name: 'Add golang to PATH'
+          command: 'echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile'
+          become: true
