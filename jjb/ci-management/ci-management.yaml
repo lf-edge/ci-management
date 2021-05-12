@@ -8,7 +8,6 @@
     jenkins-silos: 'production'
     jobs:
       - '{project-name}-github-ci-jobs'
-<<<<<<< HEAD
       - '{project-name}-github-packer-jobs':
           openstack: false
           packer-builder: aws
@@ -18,8 +17,6 @@
             - 'ubuntu-20.04'
           templates:
             - 'builder-aws'
-=======
->>>>>>> 7b2c200e5e0950d3d8979bd5ad3a245af2cee17e
 
     views:
       - project-view
