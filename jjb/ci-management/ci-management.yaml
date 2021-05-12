@@ -8,6 +8,7 @@
     jenkins-silos: 'production'
     jobs:
       - '{project-name}-github-ci-jobs'
+<<<<<<< HEAD
       - '{project-name}-github-packer-jobs':
           openstack: false
           packer-builder: aws
@@ -17,6 +18,54 @@
             - 'ubuntu-20.04'
           templates:
             - 'builder-aws'
+=======
+>>>>>>> 7b2c200e5e0950d3d8979bd5ad3a245af2cee17e
 
     views:
       - project-view
+
+- project:
+    name: packer-verify
+    jobs:
+      - github-packer-verify
+
+    project: ci-management
+    project-name: ci-management
+    build-node: centos7-builder-aws-1c-2g
+    openstack: false
+    packer-builder: aws
+
+- project:
+    name: packer-builder-jobs
+    jobs:
+      - github-packer-merge
+      - github-packer-verify-build
+
+    project: ci-management
+    project-name: ci-management
+    build-node: centos7-builder-aws-1c-2g
+    openstack: false
+    packer-builder: aws
+
+    templates: builder-aws
+    platforms:
+      - centos-7
+      - centos-8
+      - ubuntu-20.04
+
+- project:
+    name: packer-docker-jobs
+    jobs:
+      - github-packer-merge
+      - github-packer-verify-build
+
+    project: ci-management
+    project-name: ci-management
+    build-node: centos7-builder-aws-1c-2g
+    openstack: false
+    packer-builder: aws
+    build-timeout: 90
+
+    templates: docker-aws
+    platforms:
+      - ubuntu-20.04
