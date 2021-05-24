@@ -1,11 +1,16 @@
 - job:
     name: anax-build-pipeline
     project-type: pipeline
+    properties:
+      - github:
+          url: "https://github.com/open-horizon/anax/"
     pipeline-scm:
       script-path: "Jenkinsfile"
       scm:
         - git:
             url: "https://github.com/open-horizon/anax.git"
+            credentials-id: 'lfedge-jenkins-github'
+            refspec: '+refs/heads/lfedge-jenkins:refs/remotes/origin/lfedge-jenkins'
             branches: 
               - "lfedge-jenkins"
             clean: true
