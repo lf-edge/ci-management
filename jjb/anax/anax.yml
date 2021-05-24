@@ -21,4 +21,3 @@
           permit-all: true
           white-list-target-branches:
             - lfedge-jenkins
-          auth-id: "lfedge-jenkins-github"
