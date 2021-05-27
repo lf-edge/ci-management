@@ -11,8 +11,6 @@
             url: "https://github.com/open-horizon/anax.git"
             credentials-id: 'lfedge-jenkins-github'
             refspec: '+refs/heads/lfedge-jenkins:refs/remotes/origin/lfedge-jenkins'
-            branches: 
-              - "lfedge-jenkins"
             clean: true
             credentials-id: "lfedge-jenkins-github"
     triggers:
