@@ -12,6 +12,8 @@
             refspec: '+refs/pull/*:refs/remotes/origin/pr/*'
             clean: true
             credentials-id: "lfedge-jenkins-github"
+            branches:
+              - "lfedge-jenkins"
     triggers:
       - github-pull-request:
           github-hooks: true
