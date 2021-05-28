@@ -9,8 +9,7 @@
       scm:
         - git:
             url: "https://github.com/open-horizon/anax.git"
-            credentials-id: 'lfedge-jenkins-github'
-            refspec: '+refs/heads/lfedge-jenkins:refs/remotes/origin/lfedge-jenkins'
+            refspec: '+refs/pull/*:refs/remotes/origin/pr/*'
             clean: true
             credentials-id: "lfedge-jenkins-github"
     triggers:
