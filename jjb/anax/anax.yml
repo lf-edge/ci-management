@@ -13,7 +13,7 @@
             clean: true
             credentials-id: "lfedge-jenkins-github"
             branches:
-              - "lfedge-jenkins"
+              - "$sha1"
     triggers:
       - github-pull-request:
           github-hooks: true
