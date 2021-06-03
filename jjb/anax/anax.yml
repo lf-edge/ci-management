@@ -1,3 +1,4 @@
+---
 - job:
     name: anax-build-pipeline
     project-type: pipeline
@@ -20,3 +21,13 @@
           permit-all: true
           white-list-target-branches:
             - lfedge-jenkins
+
+- project:
+    name: anax
+    project: anax
+    project-name: anax
+    jobs:
+      - anax-build-pipeline
+
+    views:
+      - project-view
