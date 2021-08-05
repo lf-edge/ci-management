@@ -1,0 +1,7 @@
+{
+  "aws_access_key": "$PACKER_USR",
+  "aws_secret_key": "$PACKER_PSW",
+  "subnet_id": "subnet-0223dfa9b0a8b75f9",
+  "security_group_id": "sg-07973d261f428b092",
+  "vpc_id": "vpc-0118e1cf93f0e51dd"
+}

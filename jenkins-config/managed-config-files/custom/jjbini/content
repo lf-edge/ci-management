@@ -1,0 +1,16 @@
+[job_builder]
+ignore_cache=True
+keep_descriptions=False
+include_path=.:scripts:~/git/
+recursive=True
+
+[jenkins]
+url=https://jenkins.lfedge.org/
+user=$JOBBUILDER_USR
+password=$JOBBUILDER_PSW
+query_plugins_info=False
+
+[production]
+url=https://jenkins.lfedge.org/
+user=$JOBBUILDER_USR
+password=$JOBBUILDER_PSW
