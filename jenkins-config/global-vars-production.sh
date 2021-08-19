@@ -1,0 +1,9 @@
+GIT_BASE=https://github.com/lf-edge/$PROJECT
+GIT_CLONE_URL=git@github.com:
+GIT_URL=https://github.com
+JENKINS_HOSTNAME=aws-us-west-2-lfedge-jenkins-1
+LOGS_SERVER=
+S3_BUCKET=
+SIGUL_BRIDGE_IP=
+SIGUL_KEY=
+SILO=production
